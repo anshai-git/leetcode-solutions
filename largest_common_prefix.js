@@ -59,8 +59,7 @@ function create_node(node_value) {
 const root_element = create_element('ROOT');
 
 function draw_trie(root_node) {
-  
-  while(children.length) {
-    
-  }
+	if (children == null)	{
+		
+	}
 } 
