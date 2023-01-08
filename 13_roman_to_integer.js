@@ -21,13 +21,13 @@ function get_value_for_character(char) {
   return result;
 }
 
-function roman_to_int(num) {
-  let result = 0;
+var romanToInt = function(s) {
+ let result = 0;
 
-  for (let i = 0; i < num.length; i++) {
+  for (let i = 0; i < s.length; i++) {
     let current_num = 0;
-    let current_character = num[i];
-    let next_character = num[i+1];
+    let current_character = s[i];
+    let next_character = s[i+1];
 
     if (current_character === 'I' && (next_character === 'V' || next_character === 'X')) {
       if (next_character === 'V') {
@@ -59,10 +59,4 @@ function roman_to_int(num) {
     result += current_num;
   }
   return result;
-}
-
-
-// test
-const num1 = 'III';
-
-console.log(roman_to_int(num1));
+};
